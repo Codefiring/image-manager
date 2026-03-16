@@ -11,6 +11,7 @@ This repository is a small Python CLI tool for offline photo organization.
 Keep new code in the existing script unless the file becomes hard to navigate; split only when a clear module boundary appears.
 
 ## Build, Test, and Development Commands
+- Run all commands inside the `conda` environment `misc`: `conda activate misc`
 - `python3 organize_photos.py /path/to/photos`: preview classification without copying files.
 - `python3 organize_photos.py /path/to/photos --apply`: execute the copy operation.
 - `python3 organize_photos.py /path/to/photos --apply --output /tmp/out`: copy into a custom destination.
@@ -42,3 +43,6 @@ Follow that pattern: start with a verb, keep the subject concise, and describe o
 
 ## Security & Data Safety
 Do not change the default safety model lightly. This tool is designed to copy files, not move or delete them. Treat anything that could overwrite user photos as high risk and cover it with tests first.
+
+## Environment Notes
+Use the `misc` conda environment for local development, testing, and one-off runs. If dependencies are missing, install them with `pip install -r requirements.txt` after activating `misc`.

@@ -14,26 +14,37 @@
 
 ## 环境要求
 
+- 建议在 `conda` 环境 `misc` 中运行
 - Python 3.12+
 - Pillow
+
+安装依赖：
+
+```bash
+conda activate misc
+pip install -r requirements.txt
+```
 
 ## 使用方式
 
 先预览：
 
 ```bash
+conda activate misc
 python3 organize_photos.py /path/to/photos
 ```
 
 确认结果后再执行复制：
 
 ```bash
+conda activate misc
 python3 organize_photos.py /path/to/photos --apply
 ```
 
 指定输出目录：
 
 ```bash
+conda activate misc
 python3 organize_photos.py /path/to/photos --apply --output /path/to/output
 ```
 
@@ -61,6 +72,7 @@ python3 organize_photos.py /path/to/photos --apply --output /path/to/output
 运行标准库测试：
 
 ```bash
+conda activate misc
 python3 -m unittest discover -s tests -v
 ```
 
